@@ -41,7 +41,7 @@ async def type_schedule(message: types.Message):
         list.append(day.strip().capitalize())
         smt = day.find_next(class_='panel-collapse nopadding nomargin')  # Находим блок с расписанием
         sib = day.find_next(class_='common-list-item row')
-        for k in smt:  # Парсинг расписания и добавление его в список
+        for k in smt:
             if sib.find(title='The date/time were changed') is not None:
                 Time = sib.find(title='The date/time were changed').text.strip()
             elif sib.find(title='The event was cancelled') is not None:
