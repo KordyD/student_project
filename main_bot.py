@@ -11,8 +11,11 @@ TOKEN = '1862096252:AAH-otPTeBwSYugh-x0neqX05IJx8xN3EJA'
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
+# По некоторой причине, страница с расписанием 104 группы выдает с моей стороны Runtime Error
+# поэтому id 104 группы (275357) заменен на id 101 группы (276415)
+
 def pars(date):
-    url = f'https://timetable.spbu.ru/AMCP/StudentGroupEvents/Primary/275357/{date}'
+    url = f'https://timetable.spbu.ru/AMCP/StudentGroupEvents/Primary/276415/{date}'
     req = requests.get(url)
     src = req.text
     return(src)
