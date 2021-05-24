@@ -13,6 +13,7 @@ dp = Dispatcher(bot)
 
 # По некоторой причине, страница с расписанием 104 группы выдает с моей стороны Runtime Error
 # поэтому id 104 группы (275357) заменен на id 101 группы (276415)
+# Есть подозрение, что необходимо использовать прокси
 
 def pars(date):
     url = f'https://timetable.spbu.ru/AMCP/StudentGroupEvents/Primary/276415/{date}'
