@@ -60,7 +60,7 @@ async def start(message: types.Message):
 @dp.message_handler(commands=['help'])
 async def start(message: types.Message):
     await message.reply(
-        'Type \'Setgroup(number)\' to set the group\n'
+        'Type \'Setgroup(number)\' to set the group (101, 102, 103, 104)\n'
         'Type \'Today\' to know the schedule for today\n'
         'Type \'Tomorrow\' to know the schedule for tomorrow\n'
         'Type \'dd.mm.yyyy\' to know the schedule for this date'
